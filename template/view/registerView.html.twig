@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class="bg-secondary">
+        <div class="container-fluid">
+            <div class="p-2 p-md-3">
+                <div class="col-10 col-md-6 col-lg-5 p-lg-5 mx-auto">
+                    <div class="text-center my-3">
+                        <h2>Inscription</h2>
+                    </div>
+                    <form>
+                        <div class="form-groupe mb-2 mb-md-3">
+                            <label for="pseudo"></label>
+                            <input type="text" class="form-control" id="pseudo" placeholder="Votre pseudo">
+                        </div>
+                        <div class="form-groupe mb-2 mb-md-3">
+                            <label for="email"></label>
+                            <input type="email" class="form-control" id="email" placeholder="Votre adresse email">
+                        </div>
+                        <div class="form-groupe mb-2 mb-md-3">
+                            <label for="password"></label>
+                            <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                        </div>
+                        <button type="submit" class="btn btn-primary col-12 my-3"> Inscription</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
