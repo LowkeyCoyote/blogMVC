@@ -42,10 +42,9 @@ class Database
 
 }
 
-$bdd = new Database('localhost');
-$test = $bdd->query('SELECT * FROM pages');
 
-var_dump($test);
+
+
 
 
 
