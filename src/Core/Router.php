@@ -28,6 +28,10 @@ class Router
         $this->router = new AltoRouter();
     }
 
+    /**
+     * @throws \Exception
+     */
+
     public function makeMap()
     {
 
