@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Controller;
+namespace App\core;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -18,12 +18,7 @@ class Controller
         $this->twig = new Environment($this->loader, ['cache' => false,
         ]);
     }
-/*
-    public function homeView()
-    {
-        echo $this->twig->render('homeView.html.twig');
-    }
-*/
+
     public function errorView()
     {
         require '../template/view/404.html.twig';
@@ -31,7 +26,7 @@ class Controller
 
     public function loginView()
     {
-        echo $this->twig->render('loginView.twig');
+        echo $this->twig->render('loginView.html.twig');
     }
 
     public function contactView()
@@ -41,7 +36,17 @@ class Controller
 
     public function postView()
     {
-        echo $this->twig->render('listView/postView.html.twig');
+        echo $this->twig->render('postView.html.twig');
     }
+    public function listView()
+    {
+        echo $this->twig->render('list.html.twig');
+    }
+
+    public function registerView()
+    {
+        echo $this->twig->render('registerView.html.twig');
+    }
+
 
 }
