@@ -1,13 +1,15 @@
 <?php
 
-use Controller\controller;
+namespace App\Controller;
+
+use App\Core\Controller;
 
 class HomeController extends Controller
 {
 
     public function homeView()
     {
-        echo $this->twig->render('homeView.html.twig');
+        echo $this->twig->render('Home/index.html.twig');
     }
 
 
