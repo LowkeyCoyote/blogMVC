@@ -6,6 +6,11 @@ namespace App\Core;
 use PDO;
 
 
+/**
+ * Class Database
+ * @package App\Core
+ */
+
 class Database
 {
 
