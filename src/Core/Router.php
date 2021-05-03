@@ -1,9 +1,17 @@
 <?php
 
-use Controller\controller;
+namespace App\core;
 
-require '../src/core/controller.php' ;
-require '../src/controller/HomeController.php';
+
+/*
+require '../src/Core/Controller.php' ;
+require '../src/Controller/HomeController.php';
+*/
+
+
+use AltoRouter;
+use App\Controller\HomeController;
+use App\Controller\RegisterController;
 
 class Router
 {
@@ -35,10 +43,19 @@ class Router
             $view = new Controller();
             $view->contactView();
         });
-        $this->router->map('GET', '/listView/[*:slug]-[i:id]', function ($slug, $id) {
+        $this->router->map('GET', '/list/post', function () {
             $view = new Controller();
-            $view->postView($slug, $id);
+            $view->postView();
         });
+        $this->router->map('GET','/list',function (){
+            $view = new Controller();
+            $view->listView();
+        });
+        $this->router->map('GET','/register',function (){
+            $view = new Controller();
+            $view->registerView();
+        });
+
 
     }
 
@@ -51,12 +68,13 @@ class Router
             if (is_callable($match['target'])) {
                 call_user_func_array($match['target'], $match['params']);
             } else {
+                die('problème');
 
                 require "../template/{$match['target']}.php";
             }
 
         } else {
-            $view = new controller();
+            $view = new Controller();
             $view->errorView();
         }
     }
