@@ -1,12 +1,12 @@
 <?php
-
 require '../vendor/autoload.php';
-require '../src/core/Router.php';
 
 
-$router = new router();
+$router = new \App\core\Router();
 $router->makeMap();
 $router->run();
+
+
 
 
 
