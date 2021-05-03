@@ -8,7 +8,7 @@ use PDO;
 
 class Database
 {
-    // Variable migration BDD //
+
     private $db_host;
     private $db_name;
     private $db_user;
